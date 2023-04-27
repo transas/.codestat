@@ -1,0 +1,6 @@
+["Reim, Elijah"]
+resolved_names = ["elijah-reim_wartsila", "elijah-reim", "e-reim"]
+git_name_email_pairs=[{name="e-reim", email="elm@transas.com"},]
+git_emails = ["elm@transas.com", "Elijah.Merkin@transas.com", "Elijah.Reim@wartsila.com"]
+git_names = ["e-reim", "Elijah Reim", "Reim, Elijah", "Elijah Merkin", "Merkin, Elijah", "elm", "elijah-reim"]
+individual_rules = ["resolved_name", "nameemail", "name_and_email", "email", "name"]
