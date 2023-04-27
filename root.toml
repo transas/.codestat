@@ -1,0 +1,18 @@
+# The "name_solving" variable describes the algorithm used for
+# converting Git name and email pair to a readable name.
+# The following setup works well for GitHub organizations:
+# 1. "github_default" - Use GitHub API to get GitHub username (may fail)
+# 2. "config" - Then try to use the users.toml file (may fail).
+#    Sometimes may change the resolving after method 1
+#    (e.g. may change resolved name if it is in the
+#    user's `resolved_names` list).
+# 3. "git_generic" - If the previous methods failed, use Git name and
+#    email pair to create some readable name (looks like "name <email>").
+name_solving = ["github_default", "config", "git_generic"]
+
+# The "config_name_solving" variable allows to customize "config" name solving.
+# The following setup first tries to match "resolved_name" to one of the user's
+# "resolved_names", then matches name & email to "git_name_email_pairs", then
+# email to "git_emails", finally git_name to "git_names". On the first match
+# username is saved as the final reasolved name.
+config_name_solving = ["resolved_name", "nameemail", "name_and_email", "email", "name"]
